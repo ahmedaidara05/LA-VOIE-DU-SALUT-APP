@@ -297,7 +297,7 @@ header h1 {
 }
 
 .settings-panel {
-    padding: 20px; /* Ajout de padding-bottom pour éviter la coupure */
+    padding: 20px 15px 30px 15px; /* haut, droite, bas, gauche */
     height: calc(100vh - 120px); /* Ajustement de la hauteur */
     overflow-y: auto;
     background: #f5f5f0;
