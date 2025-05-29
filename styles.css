@@ -91,8 +91,8 @@ header h1 {
 }
 
 .index-page {
-    padding: 60px 20px 20px; /* Ajout de padding-bottom pour éviter la coupure */
-    height: calc(100vh - 40px); /* Ajustement de la hauteur pour tenir compte des paddings */
+    padding: 60px 20px 20px; /* Réduit le padding-bottom à 20px pour moins d'espace en bas */
+    height: calc(100vh - 80px); /* Ajusté pour réduire l'espace en bas */
     overflow-y: auto;
     background: #fff;
     box-sizing: border-box;
@@ -139,7 +139,7 @@ header h1 {
     width: 90%;
     max-width: 500px;
     padding: 5px;
-    margin: 70px auto 20px; /* Augmentation de la marge pour espacer sur ordinateur */
+    margin: 60px auto 20px; /* Réduit la marge supérieure à 60px pour éviter qu'elle touche la barre */
     background: #2e7d32;
     color: white;
     border: none;
@@ -151,13 +151,13 @@ header h1 {
 /* Ajustement pour les écrans plus petits (téléphones) */
 @media (max-width: 600px) {
     .search-bar {
-        margin-top: 80px; /* Espacement supplémentaire sur téléphone */
+        margin-top: 70px; /* Réduit à 70px pour un espacement raisonnable */
     }
 }
 
 .search-results {
     position: fixed;
-    top: 110px; /* Ajusté pour tenir compte du nouvel espacement de la barre de recherche */
+    top: 100px; /* Ajusté à 100px pour correspondre à la marge de 70px sur mobile + padding */
     left: 0;
     right: 0;
     background: #fff;
@@ -183,7 +183,7 @@ header h1 {
 .content {
     margin-top: 0;
     padding: 20px;
-    height: calc(100vh - 150px); /* Ajusté pour éviter la coupure en bas */
+    height: calc(100vh - 120px); /* Ajusté pour réduire l'espace en bas */
     background: inherit;
     position: relative;
     overflow-y: auto;
@@ -193,7 +193,7 @@ header h1 {
     font-size: 16px;
     line-height: 1.6;
     color: #1a3c34;
-    margin-bottom: 60px;
+    margin-bottom: 20px; /* Réduit la marge pour moins d'espace */
 }
 
 .arabic-text .bismillah, .text-content .bismillah {
@@ -296,31 +296,16 @@ header h1 {
     font-size: 20px;
 }
 
-.settings-panel header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 20px;
-    background-color: #f0f0ea;
-    border-bottom: 1px solid #ccc;
-}
-
-.settings-panel header h1 {
-    font-size: 20px;
-    margin: 0;
-    flex-grow: 1;
-}
-
-.settings-panel .close-btn {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 5px;
+.settings-panel {
+    padding: 60px 20px 20px; /* Réduit le padding-bottom à 20px */
+    height: calc(100vh - 80px); /* Ajusté pour réduire l'espace en bas */
+    overflow-y: auto;
+    background: #f5f5f0;
+    box-sizing: border-box;
 }
 
 .settings-content {
-    padding-bottom: 0px; /* Espacement supplémentaire pour le dernier élément */
+    padding-bottom: 20px;
 }
 
 .setting {
@@ -352,8 +337,8 @@ header h1 {
 }
 
 .favorites-page {
-    padding: 20px 5px 20px; /* Ajout de padding-bottom pour éviter la coupure */
-    height: calc(100vh - 120px); /* Ajustement de la hauteur */
+    padding: 60px 20px 20px; /* Réduit le padding-bottom à 20px */
+    height: calc(100vh - 80px); /* Ajusté pour réduire l'espace en bas */
     overflow-y: auto;
     background: #fff;
     box-sizing: border-box;
@@ -380,8 +365,8 @@ header h1 {
 }
 
 .notes-page {
-    padding: 60px 20px 60px;
-    height: calc(100vh - 120px);
+    padding: 60px 20px 20px;
+    height: calc(100vh - 80px);
     overflow-y: auto;
     background: #f5f5f0;
     box-sizing: border-box;
@@ -389,7 +374,7 @@ header h1 {
 
 .notes-content {
     padding: 20px;
-    padding-bottom: 20px; /* Espacement supplémentaire pour le dernier élément */
+    padding-bottom: 20px;
 }
 
 #newCategory {
