@@ -17,17 +17,17 @@ body {
 }
 
 header {
-    background: #2e7d32; /* Barre verte corrigée */
+    background: #2e7d32;
     color: white;
     display: flex;
     align-items: center;
     padding: 10px 20px;
     position: fixed;
-    width: 100%; /* Assure une largeur complète */
+    width: 100%;
     top: 0;
     box-sizing: border-box;
     z-index: 1000;
-    left: 0; /* Corrige l'alignement gauche */
+    left: 0;
 }
 
 .logo {
@@ -84,22 +84,24 @@ header h1 {
 }
 
 .book-description {
-    font-size: 16px; /* Augmentation de la police */
+    font-size: 16px;
     color: #666;
     margin-top: 15px;
     line-height: 1.5;
 }
 
 .index-page {
-    padding: 60px 20px 20px;
-    height: 100vh;
+    padding: 60px 20px 60px; /* Ajout de padding-bottom pour éviter la coupure */
+    height: calc(100vh - 120px); /* Ajustement de la hauteur pour tenir compte des paddings */
     overflow-y: auto;
     background: #fff;
+    box-sizing: border-box;
 }
 
 .index-page ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .index-page li {
@@ -137,7 +139,7 @@ header h1 {
     width: 90%;
     max-width: 500px;
     padding: 5px;
-    margin: 60px auto 20px;
+    margin: 70px auto 20px; /* Augmentation de la marge pour espacer sur ordinateur */
     background: #2e7d32;
     color: white;
     border: none;
@@ -146,9 +148,16 @@ header h1 {
     text-align: center;
 }
 
+/* Ajustement pour les écrans plus petits (téléphones) */
+@media (max-width: 600px) {
+    .search-bar {
+        margin-top: 80px; /* Espacement supplémentaire sur téléphone */
+    }
+}
+
 .search-results {
     position: fixed;
-    top: 100px;
+    top: 110px; /* Ajusté pour tenir compte du nouvel espacement de la barre de recherche */
     left: 0;
     right: 0;
     background: #fff;
@@ -174,9 +183,10 @@ header h1 {
 .content {
     margin-top: 0;
     padding: 20px;
-    height: 100%;
+    height: calc(100vh - 150px); /* Ajusté pour éviter la coupure en bas */
     background: inherit;
     position: relative;
+    overflow-y: auto;
 }
 
 .arabic-text, .text-content {
@@ -206,7 +216,7 @@ header h1 {
     cursor: pointer;
 }
 
-.favorite-btn, .customize-btn, .voice-play-btn, .ai-btn {
+.favorite-btn, .customize-btn, .ai-btn {
     position: fixed;
     bottom: 10px;
     background: #2e7d32;
@@ -222,11 +232,6 @@ header h1 {
 }
 
 .customize-btn {
-    left: 25%;
-    transform: translateX(-50%);
-}
-
-.voice-play-btn {
     left: 50%;
     transform: translateX(-50%);
 }
@@ -292,10 +297,15 @@ header h1 {
 }
 
 .settings-panel {
-    padding: 60px 20px 20px;
-    height: 100vh;
+    padding: 60px 20px 60px; /* Ajout de padding-bottom pour éviter la coupure */
+    height: calc(100vh - 120px); /* Ajustement de la hauteur */
     overflow-y: auto;
     background: #f5f5f0;
+    box-sizing: border-box;
+}
+
+.settings-content {
+    padding-bottom: 20px; /* Espacement supplémentaire pour le dernier élément */
 }
 
 .setting {
@@ -327,15 +337,17 @@ header h1 {
 }
 
 .favorites-page {
-    padding: 60px 20px 20px;
-    height: 100vh;
+    padding: 60px 20px 60px; /* Ajout de padding-bottom pour éviter la coupure */
+    height: calc(100vh - 120px); /* Ajustement de la hauteur */
     overflow-y: auto;
     background: #fff;
+    box-sizing: border-box;
 }
 
 #favoritesList {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #favoritesList li {
@@ -353,14 +365,16 @@ header h1 {
 }
 
 .notes-page {
-    padding: 60px 20px 20px;
-    height: 100vh;
+    padding: 60px 20px 60px;
+    height: calc(100vh - 120px);
     overflow-y: auto;
     background: #f5f5f0;
+    box-sizing: border-box;
 }
 
 .notes-content {
     padding: 20px;
+    padding-bottom: 60px; /* Espacement supplémentaire pour le dernier élément */
 }
 
 #newCategory {
@@ -427,7 +441,7 @@ body.dark .search-results .result-item:hover {
     background: #3a3a3a;
 }
 
-body.dark .favorite-btn, body.dark .customize-btn, body.dark .voice-play-btn, body.dark .ai-btn {
+body.dark .favorite-btn, body.dark .customize-btn, body.dark .ai-btn {
     background: #2e7d32;
 }
 
